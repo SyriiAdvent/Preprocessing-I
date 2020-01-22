@@ -22,7 +22,14 @@
     <div class="container">
       <div class="topArtContainer">
         <div class="topleft"></div>
-        <div class="topright"></div>
+        <div class="topright">
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Portfolio</a>
+            <a href="#Contact">Contact</a>
+          </nav>
+        </div>
       </div>
 
       <header>
@@ -36,35 +43,104 @@
           <div class="nameContainer">
             <h1>Richard A Kode</h1>
             <h2>Full Stack Web Developer</h2>
-            <div class="social">
-              <i class="fab fa-github"></i>
-              <i class="fab fa-twitter-square"></i>
-              <i class="fas fa-envelope"></i>
-            </div>
           </div>
-          <nav>
-            <a href="#">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-          </nav>
         </div>
       </header>
 
       <div class="midArtContainer">
+        <!-- Bottom Left Content Area -->
+
         <div class="bottomLeft">
-          <h2>Career</h2>
+          <!-- <div class="iconContainer">
+            <div class="address">
+          </div>
+            <i class="fas fa-map-marked-alt"></i> 
+            <Address>
+              4154 Alkemy Road <br />
+              Albuquerque, New Mexico<br />
+               87174
+            </Address>
+          </div> -->
         </div>
+
+        <!-- Bottom right content Area -->
+
         <div class="bottomRight">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <div class="part1">
+            <section id="aboutme">
+              <h2>What I'm About</h2>
+              <p>
+                I'm a web Developer in and out. From back end to front, I can
+                design and deploy just about anything you can put my mind at. I've
+                worked at several different companys from small startups to even
+                Google!
+              </p>
+            </section>
+
+            <section id="education">
+              <h2>Education</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus. 
+                Libero nunc consequat interdum varius sit amet mattis vulputate enim.</p>
+            </section>
+          </div>
+
+          <div class="part2">
+            <section id="workHistory">
+              <h2>
+                Work History
+              </h2>
+              <ul>
+                <li>Google</li>
+                <li>Pirasoft Inc</li>
+                <li>Soft Global</li>
+                <li>DashME Inc</li>
+                <li>Upstart Company</li>
+              </ul>
+            </section>
+
+            <section id="skills">
+              <h2>Skills</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>Python</li>
+                <li>C#</li>
+                <li>Angular</li>
+                <li>MongoDB</li>
+              </ul>
+            </section>
+          </div>
+          <section class="contacts">
+            <h2 id="Contact">
+              Contact me
+            </h2>
+
+            <div class="form-container" >
+              <form action="action_page.php">
+  
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+                  <label for="email">email</label>
+                  <input type="text" id="email" name="email" placeholder="employer@gmail.com">
+  
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+                  <input type="submit" value="Submit">
+  
+              </form>
+          </section>
+          <footer>
+            <div class="copyright">
+              <span>&copy; copyright Kode 2020</span>
+            </div>
+          </footer>
         </div>
       </div>
     </div>

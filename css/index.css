@@ -136,69 +136,89 @@ body {
   max-width: 100%;
   font-size: 62.5%;
   line-height: 1.2;
+  font-family: "Roboto Mono", monospace;
 }
-.flex {
-  display: flex;
-}
-.flexColumn {
-  display: flex;
-  flex-direction: column;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
 }
 .container {
   font-size: 1.6rem;
 }
-.container * {
-  width: 100%;
-}
 .container .topArtContainer {
   display: flex;
+  width: 100%;
   height: 8vh;
   justify-content: space-evenly;
 }
 .container .topArtContainer .topleft {
   display: flex;
-  width: 30%;
+  width: 25%;
   height: 100%;
-  background-color: #5c1010;
+  background-color: #640b0b;
+}
+.container .topArtContainer .topleft .social {
+  width: 100%;
 }
 .container .topArtContainer .topright {
-  width: 70%;
+  display: flex;
+  width: 75%;
   height: 100%;
-  background-color: #e7e7e7;
+  background-color: white;
+}
+.container .topArtContainer .topright nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container .topArtContainer .topright nav a {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+}
+.container .topArtContainer .topright nav a:hover {
+  color: white;
+  transition: 1s;
+  background-color: #640b0b;
 }
 .container header {
   display: flex;
+  justify-content: space-evenly;
   width: 100%;
-  height: 35vh;
-  background-color: #f6f6f6;
-  box-shadow: 10px 10px 4px 5px rgba(0, 0, 0, 0.19);
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
 }
 .container header .leftHeader {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 25%;
 }
 .container header .leftHeader img {
-  width: 75%;
-  height: 75%;
+  width: 90%;
+  height: 90%;
+  align-self: center;
 }
 .container header .rightHeader {
-  width: 70%;
+  width: 75%;
 }
 .container header .rightHeader .nameContainer {
   width: 100%;
-  height: 80%;
+  padding-top: 5%;
+  margin-bottom: 15%;
 }
 .container header .rightHeader h1 {
   text-align: center;
-  font-size: 6rem;
-  letter-spacing: 1rem;
+  font-size: 5rem;
+  letter-spacing: 0.8rem;
   text-decoration: underline;
 }
 .container header .rightHeader h2 {
@@ -220,39 +240,92 @@ body {
   height: 20%;
   font-size: 3.5rem;
 }
-.container header .rightHeader nav {
-  display: flex;
-  width: 100%;
-  height: 20%;
-}
-.container header .rightHeader nav a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 2rem;
-  color: black;
-}
-.container header .rightHeader nav a:hover {
-  color: white;
-  transition: 1s;
-  background-color: #5c1010;
-}
 .container .midArtContainer {
   display: flex;
   justify-content: space-evenly;
 }
 .container .midArtContainer .bottomLeft {
-  background-color: #5c1010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #640b0b;
   color: white;
-  width: 30%;
-  height: 100vh;
-}
-.container .midArtContainer .bottomLeft h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
+  width: 25%;
 }
 .container .midArtContainer .bottomRight {
-  background-color: #e7e7e7;
+  background-color: white;
   color: black;
-  width: 70%;
+  width: 75%;
+  padding: 0 3%;
+}
+.container .midArtContainer .bottomRight h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.container .midArtContainer .bottomRight .part1 {
+  width: 100%;
+  margin: 5% 0;
+  padding-bottom: 10%;
+  border-bottom: 1px solid black;
+}
+.container .midArtContainer .bottomRight .part1 #aboutme {
+  margin: 6% 0;
+}
+.container .midArtContainer .bottomRight .part1 #aboutme p {
+  padding-right: 7%;
+}
+.container .midArtContainer .bottomRight .part1 #education {
+  margin: 6% 0;
+}
+.container .midArtContainer .bottomRight .part1 #education h2 {
+  display: flex;
+  justify-content: center;
+  padding-left: 50%;
+}
+.container .midArtContainer .bottomRight .part2 {
+  margin: 3% 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 10%;
+  border-bottom: 1px solid black;
+}
+.container .midArtContainer .bottomRight .contacts {
+  text-align: center;
+  padding: 0 10%;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="text"],
+.container .midArtContainer .bottomRight .contacts .form-container select,
+.container .midArtContainer .bottomRight .contacts .form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="submit"] {
+  border: 2px solid black;
+  margin: 5% 0;
+  width: 20vh;
+  height: 3vh;
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: white;
+  margin: 0;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="submit"]:hover {
+  transition: 0.5s;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+}
+.container .midArtContainer footer {
+  text-align: center;
+  margin: 10% 0 5% 0;
 }
