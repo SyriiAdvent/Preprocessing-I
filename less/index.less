@@ -194,6 +194,10 @@ body {
       height: 100%;
       background-color: @leftColor;
 
+      @media (max-width: 500px) {
+        display: none;
+      }
+
       .social {
         width: 100%;
       }
@@ -203,6 +207,12 @@ body {
       width: 75%;
       height: 100%;
       background-color: @rightColor;
+
+      @media (max-width: 500px) {
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: @leftColor;
+      }
 
       nav {
         .flex();
@@ -215,12 +225,21 @@ body {
           text-decoration: none;
           font-size: 2rem;
           color: black;
-        }
 
-        a:hover {
-          color: white;
-          transition: 1s;
-          background-color: @leftColor;
+          @media (max-width: 500px) {
+            color: white;
+          }
+
+          &:hover {
+            color: white;
+            transition: 0.5s;
+            background-color: @leftColor;
+
+            @media (max-width: 500px) {
+              color: black;
+              background-color: white;
+            }
+          }
         }
       }
     }
@@ -239,6 +258,10 @@ body {
       .center();
       width: 25%;
 
+      @media (max-width: 500px) {
+        display: none;
+      }
+
       img {
         width: 90%;
         height: 90%;
@@ -253,32 +276,33 @@ body {
         // height: 80%;
         padding-top: 5%;
         margin-bottom: 15%;
-      }
 
-      h1 {
-        text-align: center;
-        font-size: 5rem;
-        letter-spacing: 0.8rem;
-        text-decoration: underline;
-      }
+        h1 {
+          text-align: center;
+          font-size: 5rem;
+          letter-spacing: 0.8rem;
+          text-decoration: underline;
+          margin-bottom: 3%;
+        }
 
-      h2 {
-        text-align: center;
-        font-size: 3rem;
-      }
-
-      .social {
-        .center();
-        width: 100%;
-        padding-top: 3%;
-
-        i {
-          .center();
-          width: 5rem;
-          height: 20%;
-          font-size: 3.5rem;
+        h2 {
+          text-align: center;
+          font-size: 3rem;
         }
       }
+
+      // .social {
+      //   .center();
+      //   width: 100%;
+      //   padding-top: 3%;
+
+      //   i {
+      //     .center();
+      //     width: 5rem;
+      //     height: 20%;
+      //     font-size: 3.5rem;
+      //   }
+      // }
     }
   }
 
@@ -293,6 +317,10 @@ body {
       color: white;
       font-size: 1.3rem;
       width: 25%;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
 
     .bottomRight {
