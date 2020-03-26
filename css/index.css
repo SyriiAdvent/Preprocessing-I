@@ -1,1 +1,350 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  max-height: 100%;
+  max-width: 100%;
+  font-size: 62.5%;
+  line-height: 1.2;
+  font-family: "Roboto Mono", monospace;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
+}
+.container {
+  font-size: 1.6rem;
+}
+.container .topArtContainer {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  justify-content: space-evenly;
+}
+.container .topArtContainer .topleft {
+  display: flex;
+  width: 25%;
+  height: 100%;
+  background-color: #adcc71;
+}
+@media (max-width: 500px) {
+  .container .topArtContainer .topleft {
+    display: none;
+  }
+}
+.container .topArtContainer .topleft .social {
+  width: 100%;
+}
+.container .topArtContainer .topright {
+  display: flex;
+  width: 75%;
+  height: 100%;
+  background-color: white;
+}
+@media (max-width: 500px) {
+  .container .topArtContainer .topright {
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #adcc71;
+  }
+}
+.container .topArtContainer .topright nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container .topArtContainer .topright nav a {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+}
+@media (max-width: 500px) {
+  .container .topArtContainer .topright nav a {
+    color: white;
+  }
+}
+.container .topArtContainer .topright nav a:hover {
+  color: white;
+  transition: 0.5s;
+  background-color: #adcc71;
+}
+@media (max-width: 500px) {
+  .container .topArtContainer .topright nav a:hover {
+    color: black;
+    background-color: white;
+  }
+}
+.container header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+.container header .leftHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+@media (max-width: 500px) {
+  .container header .leftHeader {
+    display: none;
+  }
+}
+.container header .leftHeader img {
+  width: 90%;
+  height: 90%;
+  align-self: center;
+}
+.container header .rightHeader {
+  width: 75%;
+}
+.container header .rightHeader .nameContainer {
+  width: 100%;
+  padding-top: 5%;
+  margin-bottom: 15%;
+}
+.container header .rightHeader .nameContainer h1 {
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 0.8rem;
+  text-decoration: underline;
+  margin-bottom: 3%;
+}
+.container header .rightHeader .nameContainer h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.container .midArtContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .midArtContainer .bottomLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #adcc71;
+  color: white;
+  font-size: 1.3rem;
+  width: 25%;
+}
+@media (max-width: 500px) {
+  .container .midArtContainer .bottomLeft {
+    display: none;
+  }
+}
+.container .midArtContainer .bottomRight {
+  background-color: white;
+  color: black;
+  width: 75%;
+  padding: 0 3%;
+}
+.container .midArtContainer .bottomRight h2 {
+  margin: 2% 0;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.container .midArtContainer .bottomRight .part1 {
+  width: 100%;
+  margin: 5% 0;
+  padding-bottom: 10%;
+  border-bottom: 1px solid black;
+}
+.container .midArtContainer .bottomRight .part1 #aboutme {
+  margin: 6% 0;
+}
+.container .midArtContainer .bottomRight .part1 #aboutme p {
+  padding-right: 7%;
+}
+.container .midArtContainer .bottomRight .part1 #education {
+  margin: 6% 0;
+}
+.container .midArtContainer .bottomRight .part1 #education h2 {
+  display: flex;
+  justify-content: center;
+  padding-left: 50%;
+}
+.container .midArtContainer .bottomRight .part2 {
+  margin: 3% 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 10%;
+  border-bottom: 1px solid black;
+}
+.container .midArtContainer .bottomRight .contacts {
+  text-align: center;
+  padding: 0 10%;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="text"],
+.container .midArtContainer .bottomRight .contacts .form-container select,
+.container .midArtContainer .bottomRight .contacts .form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="submit"] {
+  border: 2px solid black;
+  margin: 5% 0;
+  width: 20vh;
+  height: 3vh;
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: white;
+  margin: 0;
+}
+.container .midArtContainer .bottomRight .contacts .form-container input[type="submit"]:hover {
+  transition: 0.5s;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+}
+.container .midArtContainer footer {
+  text-align: center;
+  margin: 10% 0 5% 0;
+}

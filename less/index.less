@@ -4,56 +4,419 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+//Main Element Styles
+
+html,
+body {
+  max-height: 100%;
+  max-width: 100%;
+  font-size: 62.5%;
+  line-height: 1.2;
+  font-family: @main-font;
 }
 
+// @Import Fonts
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+// Variables
+
+@headerColor: rgb(243, 243, 243);
+@leftColor: #adcc71;
+@rightColor: white;
+@main-font: "Roboto Mono", monospace;
+
+// Mixins
+
+.flex() {
+  display: flex;
+}
+.flexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// LESS
+
+.container {
+  * {
+    // width: 100%;
+    // border: 1px solid black;
+  }
+  // Global font-size
+
+  font-size: 1.6rem;
+
+  .topArtContainer {
+    .flex();
+    width: 100%;
+    height: 8vh;
+    justify-content: space-evenly;
+
+    .topleft {
+      .flex();
+      width: 25%;
+      height: 100%;
+      background-color: @leftColor;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+
+      .social {
+        width: 100%;
+      }
+    }
+    .topright {
+      .flex();
+      width: 75%;
+      height: 100%;
+      background-color: @rightColor;
+
+      @media (max-width: 500px) {
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: @leftColor;
+      }
+
+      nav {
+        .flex();
+        justify-content: space-evenly;
+        width: 100%;
+
+        a {
+          width: 25%;
+          .center();
+          text-decoration: none;
+          font-size: 2rem;
+          color: black;
+
+          @media (max-width: 500px) {
+            color: white;
+          }
+
+          &:hover {
+            color: white;
+            transition: 0.5s;
+            background-color: @leftColor;
+
+            @media (max-width: 500px) {
+              color: black;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .flex();
+    justify-content: space-evenly;
+    width: 100%;
+    // height: 34vh;
+    background-color: @headerColor;
+    margin: 0;
+    padding: 0;
+
+    .leftHeader {
+      .center();
+      width: 25%;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+
+      img {
+        width: 90%;
+        height: 90%;
+        align-self: center;
+      }
+    }
+    .rightHeader {
+      width: 75%;
+
+      .nameContainer {
+        width: 100%;
+        // height: 80%;
+        padding-top: 5%;
+        margin-bottom: 15%;
+
+        h1 {
+          text-align: center;
+          font-size: 5rem;
+          letter-spacing: 0.8rem;
+          text-decoration: underline;
+          margin-bottom: 3%;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 3rem;
+        }
+      }
+
+      // .social {
+      //   .center();
+      //   width: 100%;
+      //   padding-top: 3%;
+
+      //   i {
+      //     .center();
+      //     width: 5rem;
+      //     height: 20%;
+      //     font-size: 3.5rem;
+      //   }
+      // }
+    }
+  }
+
+  .midArtContainer {
+    .flex();
+    justify-content: space-evenly;
+
+    .bottomLeft {
+      .flexColumn();
+      justify-content: center;
+      background-color: @leftColor;
+      color: white;
+      font-size: 1.3rem;
+      width: 25%;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+
+    .bottomRight {
+      background-color: @rightColor;
+      color: black;
+      width: 75%;
+      padding: 0 3%;
+
+      h2 {
+        margin: 2% 0;
+        font-size: 3rem;
+        text-decoration: underline;
+      }
+
+      .part1 {
+        width: 100%;
+        margin: 5% 0;
+        padding-bottom: 10%;
+        border-bottom: 1px solid black;
+
+        #aboutme {
+          margin: 6% 0;
+          p {
+            padding-right: 7%;
+          }
+        }
+
+        #education {
+          margin: 6% 0;
+          h2 {
+            .flex();
+            justify-content: center;
+            padding-left: 50%;
+          }
+        }
+      }
+
+      .part2 {
+        margin: 3% 0;
+        width: 100%;
+        .flex();
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 10%;
+        border-bottom: 1px solid black;
+
+        #workHistory {
+          // margin: 5% 0;
+        }
+
+        #skills {
+          // margin: 5% 0;
+        }
+      }
+
+      .contacts {
+        text-align: center;
+        padding: 0 10%;
+
+        .form-container {
+          input[type="text"],
+          select,
+          textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+
+          input[type="submit"] {
+            border: 2px solid black;
+            margin: 5% 0;
+            width: 20vh;
+            height: 3vh;
+            border-radius: 12px;
+            font-size: 12px;
+            background-color: white;
+            margin: 0;
+          }
+
+          input[type="submit"]:hover {
+            transition: 0.5s;
+            align-items: center;
+            background-color: black;
+            color: aliceblue;
+          }
+        }
+      }
+    }
+    footer {
+      text-align: center;
+      margin: 10% 0 5% 0;
+    }
+  }
+}
